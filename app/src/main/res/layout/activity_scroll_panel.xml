@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.testapp.homevideoproject.ScrollPanel">
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/colorTitleHeader"
+                    android:padding="2dip">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_weight = "1"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical|left"
+                            android:src="@mipmap/ic_launcher_round"
+                            />
+                        <TextView android:id="@id/android:empty"
+                            android:layout_weight = "2"
+                            android:layout_height="60dp"
+                            android:layout_width="wrap_content"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/textview"
+                            android:layout_weight = "4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:isScrollContainer="false"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/app_name"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textSize="22dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/linearStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <ImageView
+                                android:id="@+id/ic_moving_detector"
+                                android:layout_width="wrap_content"
+                                android:layout_weight = "1"
+                                android:layout_height="40dp"
+                                android:layout_gravity="left"
+                                android:src="@drawable/ic_move_detector"
+                                />
+                        <ImageView
+                            android:id="@+id/ic_water_leak_detector"
+                            android:layout_width="wrap_content"
+                            android:layout_weight = "1"
+                            android:layout_height="40dp"
+                            android:layout_gravity="left"
+                            android:src="@drawable/ic_umbrella"
+                            />
+                        <ImageView
+                            android:id="@+id/ic_light_detector"
+                            android:layout_width="wrap_content"
+                            android:layout_weight = "1"
+                            android:layout_height="40dp"
+                            android:layout_gravity="left"
+                            android:clickable="true"
+                            android:src="@drawable/ic_light_detector"
+                            />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearSpacer"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#AAAAAA">
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearSwitcher"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF">
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
