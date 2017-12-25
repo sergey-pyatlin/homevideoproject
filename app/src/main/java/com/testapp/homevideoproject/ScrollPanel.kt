@@ -1,13 +1,17 @@
 package com.testapp.homevideoproject
 
+import android.content.Context
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_scroll_panel.*
+import android.content.Context.LAYOUT_INFLATER_SERVICE
+import android.view.LayoutInflater
+import android.widget.*
+import com.testapp.homevideoproject.R.layout.carousel_container
+import kotlinx.android.synthetic.main.carousel_container.*
+
 
 class ScrollPanel : AppCompatActivity() {
 
@@ -27,20 +31,34 @@ class ScrollPanel : AppCompatActivity() {
             Toast.makeText(this@ScrollPanel, "ПОТОП!!!", Toast.LENGTH_SHORT).show()
         }
 
-        val lineOfSwitcher = LineOfSwitcher(this, linearSwitcher)
+        var lineOfSwitcher = LineOfSwitcher(this, linearSwitcher)
         lineOfSwitcher.SetDataFormat("","LinerSwitcher1")
         lineOfSwitcher.InitLine()
 
-        val lineOfSwitcher2 = LineOfSwitcher(this, linearSwitcher)
-        lineOfSwitcher2.SetDataFormat("","LinerSwitcher2")
-        lineOfSwitcher2.InitLine()
+        var linearSwitcher = scroll.findViewById<LinearLayout>(R.id.linearSwitcher)
 
         val tvSwitcher = TextView(this)
         tvSwitcher.text = "Nexxt step of my changes - make "
         tvSwitcher.setWidth(600)
         tvSwitcher.setBackgroundColor(Color.BLUE)
         //linearSwitcher.addView(lineOfSwitcher)
-        linearSwitcher.addView(tvSwitcher)
-        linearSwitcher.addView(lineOfSwitcher)
+    //    linearSwitcher.addView(lineOfSwitcher)
+
+//        val inflater = this@ScrollPanel.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+ //       val view = inflater.inflate(R.layout.carousel_container, linearSwitcher, false)
+ //       linearSwitcher.addView(view)
+        //val testLinearLayout: LinearLayout = findViewById(R.id.carousel_container) as LinearLayout
+
+        var ltInflater: LayoutInflater = layoutInflater
+        var line : LinearLayout = LinearLayout(this@ScrollPanel)
+
+        for (x in 1..10 step 1){
+            val item : FrameLayout = ltInflater.inflate(R.layout.carousel_container, line, false) as FrameLayout
+            val tvName = item.findViewById<TextView>(R.id.tvName)
+            var strS:String = ">>> item #: $x"
+            tvName.setText(strS)
+            line.addView(item)
+        }
+        linearSwitcher.addView(line)
     }
 }
