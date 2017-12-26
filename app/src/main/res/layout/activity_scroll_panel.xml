@@ -85,10 +85,10 @@
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/linearSwitcher"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#FFFFFF">
+                    android:layout_height="500px"
+                    android:background="#BBBBBB">
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
