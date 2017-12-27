@@ -18,7 +18,6 @@ class LineOfSwitcher:LinearLayout{
         contextSwitcher = getContext()
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, iHeightDP)
         setGravity(Gravity.CENTER_VERTICAL)
-        setBackgroundColor(Color.YELLOW)
     }
 
     private var idSwitcher: Int = 0
@@ -50,7 +49,6 @@ class LineOfSwitcher:LinearLayout{
         tvSwitcher.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24f)
         tvSwitcher.setTypeface(Typeface.SANS_SERIF)
         tvSwitcher.setGravity(Gravity.CENTER_VERTICAL)
-        tvSwitcher.setBackgroundColor(Color.RED)
 
         val lp2 = LayoutParams(iHeightDP, LayoutParams.WRAP_CONTENT, 5f)
         tvSwitcher.setLayoutParams(lp2)
@@ -58,5 +56,4 @@ class LineOfSwitcher:LinearLayout{
         addView(imageView)
         addView(tvSwitcher)
     }
-
 }
