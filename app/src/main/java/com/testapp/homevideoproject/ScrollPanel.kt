@@ -1,30 +1,24 @@
 package com.testapp.homevideoproject
 
-import android.content.Context
-import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_scroll_panel.*
-import android.content.Context.LAYOUT_INFLATER_SERVICE
-import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.widget.*
-import com.testapp.homevideoproject.R.layout.carousel_container
-import com.testapp.homevideoproject.detectors.BinaryDetector
-import kotlinx.android.synthetic.main.carousel_container.*
 import android.widget.Toast
 import android.view.GestureDetector
-import com.testapp.homevideoproject.R.id.linearSwitcher
-import android.text.method.Touch.onTouchEvent
-import android.view.ViewTreeObserver.OnScrollChangedListener
-import java.lang.Thread.sleep
+import android.graphics.Point
+import android.R.attr.x
+import android.view.Display
+
+
 
 
 class ScrollPanel : AppCompatActivity() {
 
     lateinit var mygestureDetector: GestureDetector
-
+    lateinit var switcherContainer: LinearContainer
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scroll_panel)
@@ -43,15 +37,27 @@ class ScrollPanel : AppCompatActivity() {
             Toast.makeText(this@ScrollPanel, "ПОТОП!!!", Toast.LENGTH_SHORT).show()
         }
 
+        //find the LinearLayout (basic for carousels)
         var linearSwitcher = scroll.findViewById<LinearLayout>(R.id.linearSwitcher)
 
-        var sSingletonSettings = SingletonSettings.instance
-        for (item in sSingletonSettings.listDetectors) {
-            var lineOfSwitcher = LineOfSwitcher(this, linearSwitcher)
-            lineOfSwitcher.SetDataFormat("", item.getDetectorName())
-            lineOfSwitcher.InitLine()
-            linearSwitcher.addView(lineOfSwitcher)
+        //getting a count of pages needed for switchers
+        var sSettingsSingleton = SingletonSettings.instance
+        var countSwitchers = sSettingsSingleton.getCountOfSwitchers()
+        var countSwitchersOnThePage = sSettingsSingleton.byCountSwitcherOnThePage
+        var temp: Double = countSwitchers.div(countSwitchersOnThePage.toDouble())
+        var countPagesSwitchers: Int = Math.ceil(temp).toInt()
+
+        val display = windowManager.defaultDisplay
+        val size = Point()
+        display.getSize(size)
+        val width = size.x
+
+        for (iPage in 1..countPagesSwitchers step 1){
+            var linearSwitcherContainer = LinearContainer(this@ScrollPanel, linearSwitcher, iPage, width)
+            linearSwitcherContainer.InitSwitchers()
+            linearSwitcher.addView(linearSwitcherContainer)
         }
+
         linearSwitcher.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
                 var r = 0
@@ -59,6 +65,7 @@ class ScrollPanel : AppCompatActivity() {
         });
 
         linearSwitcher.setOnTouchListener(touchListener)
+
 
     }
 
@@ -136,7 +143,15 @@ class ScrollPanel : AppCompatActivity() {
             println(">>>endc = $endc")
 
             var tempX = linearSwitcher.x
-            linearSwitcher.x = tempX - diffX
+
+            var iCCount = linearSwitcher.childCount
+            var Child: View = linearSwitcher.getChildAt(0)
+            Child.x = tempX - diffX
+            var Child2: View = linearSwitcher.getChildAt(1)
+            Child2.x = 100f
+            var xt = Child2.x
+            println(">>>PAGE -2: X=$xt")
+            //linearSwitcher.x = tempX - diffX
             linearSwitcher.invalidate()
 
             return false

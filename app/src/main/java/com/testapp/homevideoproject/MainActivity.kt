@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
  //TODO: modify test code
         var setB = SingletonSettings.instance
         var Beshka = setB.b
-        setB.InitDetectors()
+        setB.InitSwitchers()
 
         var obj1 = GlobalCamera("Test1", 1, TURNED_OFF)
         var obj2 = GlobalCamera("Test2", 2, TURNED_OFF)

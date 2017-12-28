@@ -1,7 +1,7 @@
 package com.testapp.homevideoproject
 
-import com.testapp.homevideoproject.detectors.BinaryDetector
-import com.testapp.homevideoproject.detectors.EnDetectorType
+import com.testapp.homevideoproject.switchers.BinarySwitcher
+import com.testapp.homevideoproject.switchers.EnSwitcherType
 
 /**
  * Created by sergey.pyatlin on 06.12.2017.
@@ -16,23 +16,33 @@ public class SingletonSettings private constructor(){
     }
 
     var b:String? = "OpaЖопа"
-    var listDetectors: MutableList<BinaryDetector> = mutableListOf()
+    var listSwitchers: MutableList<BinarySwitcher> = mutableListOf()
+    var byCountSwitcherOnThePage: Byte = 3
 
-    public fun InitDetectors(){
-        var bBynaryDetector: BinaryDetector = BinaryDetector()
-        bBynaryDetector.InitDetector("Action Detector", EnDetectorType.BYNARY_DETECTOR)
-        bBynaryDetector.SetValueOfTrigger(1)
-        listDetectors.add(bBynaryDetector)
+    public fun InitSwitchers(){
+        var bBynarySwitcher: BinarySwitcher = BinarySwitcher()
+        bBynarySwitcher.InitSwitcher("Action Switcher", EnSwitcherType.BYNARY_SWITCHER)
+        bBynarySwitcher.SetValueOfTrigger(1)
+        listSwitchers.add(bBynarySwitcher)
 
-        var bBynaryDetectorWater: BinaryDetector = BinaryDetector()
-        bBynaryDetectorWater.InitDetector("Water Detector", EnDetectorType.BYNARY_DETECTOR)
-        bBynaryDetectorWater.SetValueOfTrigger(1)
-        listDetectors.add(bBynaryDetectorWater)
+        var bBynarySwitcherWater: BinarySwitcher = BinarySwitcher()
+        bBynarySwitcherWater.InitSwitcher("Water Switcher", EnSwitcherType.BYNARY_SWITCHER)
+        bBynarySwitcherWater.SetValueOfTrigger(1)
+        listSwitchers.add(bBynarySwitcherWater)
 
-        var bBynaryDetectorLight: BinaryDetector = BinaryDetector()
-        bBynaryDetectorLight.InitDetector("Light Detector", EnDetectorType.BYNARY_DETECTOR)
-        bBynaryDetectorLight.SetValueOfTrigger(1)
-        listDetectors.add(bBynaryDetectorLight)
+        var bBynarySwitcherLight: BinarySwitcher = BinarySwitcher()
+        bBynarySwitcherLight.InitSwitcher("Light Switcher", EnSwitcherType.BYNARY_SWITCHER)
+        bBynarySwitcherLight.SetValueOfTrigger(1)
+        listSwitchers.add(bBynarySwitcherLight)
+
+        var bBynarySwitcherSauna: BinarySwitcher = BinarySwitcher()
+        bBynarySwitcherSauna.InitSwitcher("Sauna Switcher", EnSwitcherType.BYNARY_SWITCHER)
+        bBynarySwitcherSauna.SetValueOfTrigger(1)
+        listSwitchers.add(bBynarySwitcherSauna)
+    }
+
+    public fun getCountOfSwitchers():Int{
+        return listSwitchers.size
     }
 
 }
