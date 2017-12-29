@@ -14,7 +14,7 @@ class LinearContainer: LinearLayout {
     constructor(ctx: Context, vParent: View, vID: Int, iWidth: Int) : super(ctx){
         m_vParentView = vParent
         m_cont = ctx
-        layoutParams = LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT)
+        layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
         orientation= VERTICAL
         if (vID==2) setBackgroundColor(Color.RED)
         setGravity(Gravity.CENTER_VERTICAL)
