@@ -14,17 +14,17 @@ import kotlinx.android.synthetic.main.activity_scroll_panel.*
 /**
  * Created by sergey.pyatlin on 29.12.2017.
  */
-class linearSwitcher : RelativeLayout {
-    val m_vView: RelativeLayout
+class LinearSwitcher : RelativeLayout {
+    val m_Parent: View
     var m_Width: Int
     var m_cContext: Context
     lateinit var mygestureDetector: GestureDetector
 
-    constructor(ctx: Context, viewId: RelativeLayout): super(ctx) {
-        m_vView = viewId
+    constructor(ctx: Context, parentView: View): super(ctx) {
+        m_Parent = parentView
         m_Width = 0
         m_cContext = ctx
-
+        layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
         mygestureDetector = GestureDetector(m_cContext, MyGestureDetector())
     }
 
@@ -38,18 +38,18 @@ class linearSwitcher : RelativeLayout {
 
 
         for (iPage in 1..countPagesSwitchers step 1){
-            var linearSwitcherContainer = LinearContainer(m_cContext, m_vView, iPage, m_Width)
+            var linearSwitcherContainer = LinearContainer(m_cContext, this, iPage, m_Width)
             linearSwitcherContainer.InitSwitchers()
-            m_vView.addView(linearSwitcherContainer)
+            addView(linearSwitcherContainer)
         }
 
-        m_vView.setOnClickListener(object : View.OnClickListener {
+        setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
                 var r = 0
             }
         })
 
-        m_vView.setOnTouchListener(touchListener)
+        setOnTouchListener(touchListener)
     }
 
     var touchListener: View.OnTouchListener = View.OnTouchListener { v, event ->
@@ -90,17 +90,17 @@ class linearSwitcher : RelativeLayout {
             var endc:Int = diffX.toInt()
             println(">>>endc = $endc")
 
-            var tempX = m_vView.x
+            var tempX = x
 
             val time1 = System.currentTimeMillis()
 
-            var iCCount = m_vView.childCount
+            var iCCount = childCount
             var minimumIndex = 0; var iMinData = 0
 
             if (endc>0) iMinData = m_Width else iMinData = 0 - m_Width
 
             for (i in 0..iCCount - 1 step 1) {
-                var Child: View = m_vView.getChildAt(i)
+                var Child: View = getChildAt(i)
                 var iCoord: Int = 0
                 if (endc>0) {
                     if (Child.x > 0 && Child.x < iMinData) {
@@ -121,7 +121,7 @@ class linearSwitcher : RelativeLayout {
             while (iMinData>0){
                 iMinData = iMinData / 2
                 for (i in 0..iCCount - 1 step 1) {
-                    var Child: View = m_vView.getChildAt(i)
+                    var Child: View = getChildAt(i)
                     if (endc>0) {
                         Child.x = Child.x - iMinData
                     }
@@ -169,18 +169,18 @@ class linearSwitcher : RelativeLayout {
             println(">>>endc = $endc")
 
 
-            var iCCount = m_vView.childCount
+            var iCCount = childCount
 
-            var Child: View = m_vView.getChildAt(0)
+            var Child: View = getChildAt(0)
             var tempX = Child.x
             Child.x = tempX - distanceX
-            var Child2: View = m_vView.getChildAt(1)
+            var Child2: View = getChildAt(1)
             var tempX2 = Child2.x
             Child2.x = tempX2 - distanceX
             var xt = Child2.x
             println(">>>PAGE -2: X=$xt")
             //linearSwitcher.x = tempX - diffX
-            m_vView.invalidate()
+            invalidate()
 
             return false
         }

@@ -21,12 +21,18 @@ class ScrollPanel : AppCompatActivity() {
 
     lateinit var mygestureDetector: GestureDetector
     lateinit var switcherContainer: LinearContainer
+    lateinit var linearSwitcherT: LinearSwitcher
+
     var m_Width = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scroll_panel)
 
-       mygestureDetector = GestureDetector(this@ScrollPanel, MyGestureDetector())
+        linearSwitcherT = LinearSwitcher(this@ScrollPanel, scroll)
+        linearSwitcherT.InitContainers()
+        linearLayout1.addView(linearSwitcherT)
+
+        mygestureDetector = GestureDetector(this@ScrollPanel, MyGestureDetector())
 
         ic_light_detector.setOnClickListener {
             Toast.makeText(this@ScrollPanel, "Жопа - свет в доме!", Toast.LENGTH_SHORT).show()
@@ -39,7 +45,7 @@ class ScrollPanel : AppCompatActivity() {
             Toast.makeText(this@ScrollPanel, "ПОТОП!!!", Toast.LENGTH_SHORT).show()
         }
 
-        //var linearSwitcher2 = linearSwitcher(this@ScrollPanel, scroll.findViewById<RelativeLayout>(R.id.linearSwitcher))
+/*
         //linearSwitcher2.InitContainers()
 
         //find the LinearLayout (basic for carousels)
@@ -72,7 +78,7 @@ class ScrollPanel : AppCompatActivity() {
         });
 
         linearSwitcher.setOnTouchListener(touchListener)
-
+*/
 
     }
 
@@ -88,7 +94,7 @@ class ScrollPanel : AppCompatActivity() {
 
 
     inner class MyGestureDetector : GestureDetector.SimpleOnGestureListener() {
-        override fun onSingleTapUp(e: MotionEvent?): Boolean {
+ /*       override fun onSingleTapUp(e: MotionEvent?): Boolean {
             println(">>>single tap up")
             return super.onSingleTapUp(e)
         }
@@ -235,7 +241,7 @@ class ScrollPanel : AppCompatActivity() {
             println(">>>on long press")
 
         }
-
+*/
     }
 
 }
