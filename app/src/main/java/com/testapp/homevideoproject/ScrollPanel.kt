@@ -28,7 +28,13 @@ class ScrollPanel : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scroll_panel)
 
-        linearSwitcherT = LinearSwitcher(this@ScrollPanel, scroll)
+        val display = getWindowManager().getDefaultDisplay()
+        val size = Point()
+        display.getSize(size)
+        val width = size.x
+        val height = size.y
+
+        linearSwitcherT = LinearSwitcher(this@ScrollPanel, scroll, width)
         linearSwitcherT.InitContainers()
         linearLayout1.addView(linearSwitcherT)
 

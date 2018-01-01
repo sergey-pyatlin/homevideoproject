@@ -6,9 +6,14 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import android.widget.LinearLayout
+import android.view.WindowManager
 import android.widget.RelativeLayout
 import com.testapp.homevideoproject.R.id.scroll
 import kotlinx.android.synthetic.main.activity_scroll_panel.*
+import android.opengl.ETC1.getWidth
+import android.view.Display
+
+
 
 
 /**
@@ -20,11 +25,11 @@ class LinearSwitcher : RelativeLayout {
     var m_cContext: Context
     lateinit var mygestureDetector: GestureDetector
 
-    constructor(ctx: Context, parentView: View): super(ctx) {
+    constructor(ctx: Context, parentView: View, iWidth: Int): super(ctx) {
         m_Parent = parentView
-        m_Width = 0
+        m_Width = iWidth
         m_cContext = ctx
-        layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+        layoutParams = RelativeLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
         mygestureDetector = GestureDetector(m_cContext, MyGestureDetector())
     }
 
