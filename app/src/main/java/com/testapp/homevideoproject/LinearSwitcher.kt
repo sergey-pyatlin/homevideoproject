@@ -23,12 +23,16 @@ class LinearSwitcher : RelativeLayout {
     val m_Parent: View
     var m_Width: Int
     var m_cContext: Context
+    private var mpr_iActiveContainer: Int
+    private var mpr_iMaxContainers: Int
     lateinit var mygestureDetector: GestureDetector
 
     constructor(ctx: Context, parentView: View, iWidth: Int): super(ctx) {
         m_Parent = parentView
         m_Width = iWidth
         m_cContext = ctx
+        mpr_iActiveContainer = 0
+        mpr_iMaxContainers = 0
         layoutParams = RelativeLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
         mygestureDetector = GestureDetector(m_cContext, MyGestureDetector())
     }
@@ -40,7 +44,7 @@ class LinearSwitcher : RelativeLayout {
         var countSwitchersOnThePage = sSettingsSingleton.byCountSwitcherOnThePage
         var temp: Double = countSwitchers.div(countSwitchersOnThePage.toDouble())
         var countPagesSwitchers: Int = Math.ceil(temp).toInt()
-
+        mpr_iMaxContainers = countPagesSwitchers
 
         for (iPage in 1..countPagesSwitchers step 1){
             var linearSwitcherContainer = LinearContainer(m_cContext, this, iPage, m_Width)
@@ -102,7 +106,11 @@ class LinearSwitcher : RelativeLayout {
             var iCCount = childCount
             var minimumIndex = 0; var iMinData = 0
 
+            if (endc<0 && mpr_iActiveContainer==0) return false
+            if (endc>0 && mpr_iActiveContainer>=(mpr_iMaxContainers-1)) return false
+
             if (endc>0) iMinData = m_Width else iMinData = 0 - m_Width
+
 
             for (i in 0..iCCount - 1 step 1) {
                 var Child: View = getChildAt(i)
@@ -135,6 +143,8 @@ class LinearSwitcher : RelativeLayout {
                     }
                 }
             }
+
+            if (endc<0) mpr_iActiveContainer-- else mpr_iActiveContainer++
 
             val time2 = System.currentTimeMillis()
             var timeDiff = time2-time1
@@ -173,6 +183,8 @@ class LinearSwitcher : RelativeLayout {
             var endc:Int = diffX.toInt()
             println(">>>endc = $endc")
 
+            if (endc<0 && mpr_iActiveContainer==0) return false
+            if (endc>0 && mpr_iActiveContainer>=(mpr_iMaxContainers-1)) return false
 
             var iCCount = childCount
 
