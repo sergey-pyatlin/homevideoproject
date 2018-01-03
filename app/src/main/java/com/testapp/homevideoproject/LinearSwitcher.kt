@@ -9,7 +9,6 @@ import android.widget.LinearLayout
 import android.view.WindowManager
 import android.widget.RelativeLayout
 import com.testapp.homevideoproject.R.id.scroll
-import kotlinx.android.synthetic.main.activity_scroll_panel.*
 import android.opengl.ETC1.getWidth
 import android.view.Display
 

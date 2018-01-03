@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        println(">>>==============APPLICATION START=======================")
         super.onCreate(savedInstanceState)
 
        setContentView(R.layout.activity_main)
@@ -55,5 +56,10 @@ class MainActivity : AppCompatActivity() {
         var obj2 = GlobalCamera("Test2", 2, TURNED_OFF)
         var obj3 = GlobalCamera("Test3", 3, TURNED_OFF)
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        println(">>>APPLICATION RESUME=======================")
     }
 }

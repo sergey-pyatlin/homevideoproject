@@ -18,8 +18,10 @@ public class SingletonSettings private constructor(){
     var b:String? = "OpaЖопа"
     var listSwitchers: MutableList<BinarySwitcher> = mutableListOf()
     var byCountSwitcherOnThePage: Byte = 3
+    private var mp_IsSitchersInitialized = false
 
     public fun InitSwitchers(){
+        if (mp_IsSitchersInitialized == true) return
         var bBynarySwitcher: BinarySwitcher = BinarySwitcher()
         bBynarySwitcher.InitSwitcher("Action Switcher", EnSwitcherType.BYNARY_SWITCHER)
         bBynarySwitcher.SetValueOfTrigger(1)
@@ -39,6 +41,7 @@ public class SingletonSettings private constructor(){
         bBynarySwitcherSauna.InitSwitcher("Sauna Switcher", EnSwitcherType.BYNARY_SWITCHER)
         bBynarySwitcherSauna.SetValueOfTrigger(1)
         listSwitchers.add(bBynarySwitcherSauna)
+        mp_IsSitchersInitialized = true
     }
 
     public fun getCountOfSwitchers():Int{
