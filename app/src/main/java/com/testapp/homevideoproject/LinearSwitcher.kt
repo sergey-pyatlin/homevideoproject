@@ -54,6 +54,7 @@ class LinearSwitcher : RelativeLayout {
         setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
                 var r = 0
+                r = r+1
             }
         })
 
@@ -197,15 +198,16 @@ class LinearSwitcher : RelativeLayout {
             println(">>>PAGE -2: X=$xt")
             //linearSwitcher.x = tempX - diffX
             invalidate()
-
             return false
         }
 
         override fun onContextClick(e: MotionEvent?): Boolean {
+            println(">>>on onContextClick")
             return super.onContextClick(e)
         }
 
         override fun onSingleTapConfirmed(e: MotionEvent?): Boolean {
+
             println(">>>single confirmed")
             return super.onSingleTapConfirmed(e)
         }
@@ -221,9 +223,8 @@ class LinearSwitcher : RelativeLayout {
         }
 
         override fun onLongPress(e: MotionEvent?) {
-            super.onLongPress(e)
             println(">>>on long press")
-
+            super.onLongPress(e)
         }
     }
 }

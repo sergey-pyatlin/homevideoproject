@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 //        window.getDecorView().setSystemUiVisibility(uiOptions)
 
         val stringPath1: String = "rtsp://v4.cache3.c.youtube.com/CjYLENy73wIaLQlW_ji2apr6AxMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYOr_86Xm06e5UAw=/0/0/0/video.3gp"
-        val stringPath: String = "http://www.ebookfrenzy.com/android_book/movie.mp4"
+        var stringPath: String = "http://www.ebookfrenzy.com/android_book/movie.mp4"
 
         val mediaController: MediaController = MediaController(this)
         mediaController.setAnchorView(videoactivity)

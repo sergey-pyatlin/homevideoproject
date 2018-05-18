@@ -3,13 +3,14 @@ import android.content.Context
 import android.graphics.Color
 import android.graphics.Typeface
 import android.util.TypedValue
-import android.view.Gravity
-import android.view.View
+import android.view.*
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_scroll_panel.*
+import java.util.*
+
 
 class LineOfSwitcher:LinearLayout{
     constructor(ctx: Context, vParent: View) : super(ctx){
@@ -18,6 +19,8 @@ class LineOfSwitcher:LinearLayout{
         contextSwitcher = getContext()
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, iHeightDP)
         setGravity(Gravity.CENTER_VERTICAL)
+
+
     }
 
     private var idSwitcher: Int = 0
@@ -28,14 +31,15 @@ class LineOfSwitcher:LinearLayout{
     private var contextSwitcher: Context
     private val iHeightDP: Int = 50
 
+
     fun SetDataFormat(sIcon: String, s_settingName: String){
         sSwitcherName = s_settingName
         sSwitcherIconPath = sIcon
     }
 
-    fun InitLine(){
-       val scale = context.resources.displayMetrics.density
-        var pixels : Int = (iHeightDP * scale + 0.5f).toInt()
+    fun InitLine() {
+        val scale = context.resources.displayMetrics.density
+        var pixels: Int = (iHeightDP * scale + 0.5f).toInt()
         this.setMinimumHeight(pixels)
 
         val imageView = ImageView(contextSwitcher)
@@ -55,5 +59,37 @@ class LineOfSwitcher:LinearLayout{
 
         addView(imageView)
         addView(tvSwitcher)
+
+//        setOnClickListener(object : View.OnClickListener {
+//            override fun onClick(v: View?) {
+//                if (v!=null) {
+//                    var s: ViewParent = v.parent
+//                    println(">>> On Click - $sSwitcherName")
+//                }
+//
+//            }
+//        })
+
     }
+
+    override fun onTouchEvent(ev:MotionEvent):Boolean {
+        println(">>> Motion Event - $ev")
+        return false;
+    }
+
+    override fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
+        var t = ev.getAction()
+        println(">>> onInterceptTouchEvent: Motion Event - $t")
+
+        when (ev.getAction()){
+            MotionEvent.ACTION_DOWN -> {
+                println(">>> Item Down - $sSwitcherName")
+            }
+            MotionEvent.ACTION_UP -> {
+                println(">>> Item UP - $sSwitcherName")
+            }
+        }
+        return false
+    }
+
 }
