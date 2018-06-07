@@ -29,7 +29,7 @@ class LineOfSwitcher:LinearLayout{
     private var vParentView:View
     private var cont: Context
     private var contextSwitcher: Context
-    private val iHeightDP: Int = 50
+    private val iHeightDP: Int = 100
 
 
     fun SetDataFormat(sIcon: String, s_settingName: String){
@@ -84,9 +84,7 @@ class LineOfSwitcher:LinearLayout{
         when (ev.getAction()){
             MotionEvent.ACTION_DOWN -> {
                 println(">>> Item Down - $sSwitcherName")
-            }
-            MotionEvent.ACTION_UP -> {
-                println(">>> Item UP - $sSwitcherName")
+                return true
             }
         }
         return false

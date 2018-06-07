@@ -3,18 +3,18 @@ package com.testapp.homevideoproject
 import android.R.attr.timePickerStyle
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import kotlinx.android.synthetic.main.activity_scroll_panel.*
-import android.view.MotionEvent
 import android.widget.*
 import android.widget.Toast
-import android.view.GestureDetector
 import android.graphics.Point
 import android.R.attr.x
-import android.view.Display
-
-
-
+import android.app.ActionBar
+import android.graphics.Color
+import android.media.MediaPlayer
+import android.net.Uri
+import android.support.annotation.ColorRes
+import android.view.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class ScrollPanel : AppCompatActivity() {
@@ -53,7 +53,25 @@ class ScrollPanel : AppCompatActivity() {
         linearLayout1.addView(linearSwitcherT)
 
 
-        viewView = VideoView(this)
+        var videoView = VideoView(this)
+        videoView.setLayoutParams(FrameLayout.LayoutParams(1000,700))
+        linearLayout1.addView(videoView)
+
+        var stringPath: String = "http://www.ebookfrenzy.com/android_book/movie.mp4"
+        val mediaController: MediaController = MediaController(this)
+        mediaController.setAnchorView(videoView)
+        mediaController.setMediaPlayer(videoView)
+
+        val uriString: Uri = Uri.parse(stringPath)
+        videoView.setVideoURI(uriString)
+        videoView.setMediaController(mediaController)
+
+        videoView.setOnPreparedListener(MediaPlayer.OnPreparedListener(function = {
+            videoView.start()
+        }))
+
+
+
 
     }
 }
