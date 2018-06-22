@@ -9,6 +9,7 @@ import com.testapp.homevideoproject.switchers.BinarySwitcher
 
 /**
  * Created by sergey.pyatlin on 28.12.2017.
+ * LinerSwotcher has Containers. Container has LineOfSwithcer. LinerfSwither has image and text
  */
 class LinearContainer: LinearLayout {
     constructor(ctx: Context, vParent: View, vID: Int, iWidth: Int) : super(ctx){

@@ -11,6 +11,9 @@ import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_scroll_panel.*
 import java.util.*
 
+/*
+*LinerSwotcher has Containers. Container has LineOfSwithcer. LinerSwither has image and text
+ */
 
 class LineOfSwitcher:LinearLayout{
     constructor(ctx: Context, vParent: View) : super(ctx){

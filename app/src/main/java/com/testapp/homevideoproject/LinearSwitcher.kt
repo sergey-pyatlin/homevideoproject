@@ -17,6 +17,8 @@ import android.view.Display
 
 /**
  * Created by sergey.pyatlin on 29.12.2017.
+ * An element with container horisontal scrolling
+ * LinerSwotchers has Container. Container has LineOfSwithcer. LinerfSwither has image and text
  */
 class LinearSwitcher : RelativeLayout {
     val m_Parent: View
