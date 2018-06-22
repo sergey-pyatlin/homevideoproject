@@ -78,6 +78,7 @@ class ScrollPanel : AppCompatActivity(), PlaybackControlView.VisibilityListener{
         sSimpleExoPlayerView = SimpleExoPlayerView(this@ScrollPanel)
         linearLayout1.addView(sSimpleExoPlayerView)
         sSimpleExoPlayerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FILL)
+        sSimpleExoPlayerView.minimumHeight=700
         sSimpleExoPlayerView.setControllerVisibilityListener(this)
 
 
@@ -99,7 +100,7 @@ class ScrollPanel : AppCompatActivity(), PlaybackControlView.VisibilityListener{
 
     override fun onVisibilityChange(visibility: Int) {
         if(visibility == View.GONE) {
-            sSimpleExoPlayerView.showController()
+            //sSimpleExoPlayerView.showController()
         }
     }
 }

@@ -37,7 +37,7 @@ class ExoPlayerExt {
         val mediaSource = ExtractorMediaSource(Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"),
                 mediaDataSourceFactory, extractorsFactory, null, null)
 
-        viewSimpleExoPlayerView?.requestFocus()
+        //viewSimpleExoPlayerView?.requestFocus()
         trackSelector = DefaultTrackSelector(videoTrackSelectionFactory)
 
         player = ExoPlayerFactory.newSimpleInstance(context, trackSelector)
