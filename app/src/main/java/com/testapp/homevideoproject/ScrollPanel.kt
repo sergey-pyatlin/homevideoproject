@@ -1,36 +1,18 @@
 package com.testapp.homevideoproject
 
-import android.R.attr.timePickerStyle
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_scroll_panel.*
-import android.widget.*
 import android.widget.Toast
 
 import android.graphics.Point
-import android.R.attr.x
-import android.app.ActionBar
-import android.graphics.Color
-import android.media.MediaPlayer
-import android.net.Uri
-import android.support.annotation.ColorRes
 import android.view.*
-import com.google.android.exoplayer2.ExoPlayerFactory
-import com.google.android.exoplayer2.SimpleExoPlayer
-import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory
-import com.google.android.exoplayer2.source.ExtractorMediaSource
-import com.google.android.exoplayer2.trackselection.AdaptiveTrackSelection
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
-import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import com.google.android.exoplayer2.ui.PlaybackControlView
 import com.google.android.exoplayer2.ui.SimpleExoPlayerView
-import com.google.android.exoplayer2.upstream.DataSource
-import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
-import com.google.android.exoplayer2.upstream.TransferListener
 import com.google.android.exoplayer2.util.Util
-import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.System.currentTimeMillis
+import com.testapp.homevideoproject.linear_presentation.LinearContainer
+import com.testapp.homevideoproject.linear_presentation.LinearSwitcher
 
 
 class ScrollPanel : AppCompatActivity(), PlaybackControlView.VisibilityListener{
@@ -77,10 +59,7 @@ class ScrollPanel : AppCompatActivity(), PlaybackControlView.VisibilityListener{
         //Проигрыватель
         sSimpleExoPlayerView = SimpleExoPlayerView(this@ScrollPanel)
         linearLayout1.addView(sSimpleExoPlayerView)
-        sSimpleExoPlayerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FILL)
-        sSimpleExoPlayerView.minimumHeight=700
         sSimpleExoPlayerView.setControllerVisibilityListener(this)
-
 
         testPlayer = ExoPlayerExt (sSimpleExoPlayerView, this@ScrollPanel)
         testPlayer.initPlayer()

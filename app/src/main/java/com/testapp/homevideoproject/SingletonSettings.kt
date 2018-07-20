@@ -17,7 +17,7 @@ public class SingletonSettings private constructor(){
 
     var b:String? = "OpaЖопа"
     var listSwitchers: MutableList<BinarySwitcher> = mutableListOf()
-    var byCountSwitcherOnThePage: Byte = 3
+    var byCountSwitcherOnThePage: Byte = 2
     private var mp_IsSitchersInitialized = false
 
     public fun InitSwitchers(){
@@ -41,6 +41,29 @@ public class SingletonSettings private constructor(){
         bBynarySwitcherSauna.InitSwitcher("Sauna Switcher", EnSwitcherType.BYNARY_SWITCHER)
         bBynarySwitcherSauna.SetValueOfTrigger(1)
         listSwitchers.add(bBynarySwitcherSauna)
+
+
+        var bBynarySwitcherRobot: BinarySwitcher = BinarySwitcher()
+        bBynarySwitcherRobot.InitSwitcher("Robot Swither", EnSwitcherType.BYNARY_SWITCHER)
+        bBynarySwitcherRobot.SetValueOfTrigger(1)
+        listSwitchers.add(bBynarySwitcherRobot)
+
+
+        var bBynarySwitcherCamera1: BinarySwitcher = BinarySwitcher()
+        bBynarySwitcherCamera1.InitSwitcher("Camera1 Swither", EnSwitcherType.BYNARY_SWITCHER)
+        bBynarySwitcherCamera1.SetValueOfTrigger(1)
+        listSwitchers.add(bBynarySwitcherCamera1)
+
+        var bBynarySwitcherCamera2: BinarySwitcher = BinarySwitcher()
+        bBynarySwitcherCamera2.InitSwitcher("Camera2 Swither", EnSwitcherType.BYNARY_SWITCHER)
+        bBynarySwitcherCamera2.SetValueOfTrigger(1)
+        listSwitchers.add(bBynarySwitcherCamera2)
+
+        var bBynarySwitcherCamera3: BinarySwitcher = BinarySwitcher()
+        bBynarySwitcherCamera3.InitSwitcher("Camera3 Swither", EnSwitcherType.BYNARY_SWITCHER)
+        bBynarySwitcherCamera3.SetValueOfTrigger(1)
+        listSwitchers.add(bBynarySwitcherCamera3)
+
         mp_IsSitchersInitialized = true
     }
 

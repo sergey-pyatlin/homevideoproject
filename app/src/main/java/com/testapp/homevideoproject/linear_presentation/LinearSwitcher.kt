@@ -1,18 +1,12 @@
-package com.testapp.homevideoproject
+package com.testapp.homevideoproject.linear_presentation
 
 import android.content.Context
-import android.graphics.Point
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import android.widget.LinearLayout
-import android.view.WindowManager
 import android.widget.RelativeLayout
-import com.testapp.homevideoproject.R.id.scroll
-import android.opengl.ETC1.getWidth
-import android.view.Display
-
-
+import com.testapp.homevideoproject.SingletonSettings
 
 
 /**
@@ -34,7 +28,7 @@ class LinearSwitcher : RelativeLayout {
         m_cContext = ctx
         mpr_iActiveContainer = 0
         mpr_iMaxContainers = 0
-        layoutParams = RelativeLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+        layoutParams = RelativeLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
         mygestureDetector = GestureDetector(m_cContext, MyGestureDetector())
     }
 
@@ -87,79 +81,56 @@ class LinearSwitcher : RelativeLayout {
             println(">>>onfling $e1 and $e2")
             println(">>>onfling velocity: $velocityX and $velocityY")
 
-            var sE1:String = e1.toString()
-            var sE2:String = e2.toString()
-
+            var iCCount = childCount
             var X1: Float = e1?.getX() as Float
             var X2: Float = e2?.getX() as Float
-            var diffX:Float = X1?.minus(X2)
+            var diffX:Int = (X1?.minus(X2)).toInt()
 
-            var Y1: Float = e1?.getY() as Float
-            var Y2: Float = e2?.getY() as Float
-            var diffY:Float =Y1?.minus(Y2)
+            var shiftX: Int = 0
+            if (diffX<0 && mpr_iActiveContainer==0) return false
+            if (diffX>0 && mpr_iActiveContainer>=(mpr_iMaxContainers-1)) return false
 
-            var endc:Int = diffX.toInt()
-            println(">>>endc = $endc")
+            var tempShift = diffX.toFloat()
+            if (diffX<0) {tempShift = (m_Width - (diffX)).toFloat()}
+            if (diffX>=0) {tempShift = (m_Width - diffX).toFloat()}
 
-            var tempX = x
+            //take a difference between shifted and remaining distance with reducing *0.5
+            while (tempShift>1){
+                tempShift = Math.round((tempShift / 2)).toFloat()
+                for (i in 0..iCCount - 1 step 1) {
+                    var Child: View = getChildAt(i)
+                    if (diffX>0) {
+                        Child.x = Child.x - tempShift
+                    }
+                    else {
+                        Child.x = Child.x + tempShift
+                    }
+                }
+            }
 
-            val time1 = System.currentTimeMillis()
-
-            var iCCount = childCount
-            var minimumIndex = 0; var iMinData = 0
-
-            if (endc<0 && mpr_iActiveContainer==0) return false
-            if (endc>0 && mpr_iActiveContainer>=(mpr_iMaxContainers-1)) return false
-
-            if (endc>0) iMinData = m_Width else iMinData = 0 - m_Width
-
+            //set coordinates in correct position after animation
+            var beginX : Float
+            if (diffX>0)
+                beginX  = ((mpr_iActiveContainer+1)*m_Width*(-1)).toFloat()
+            else
+                beginX  = ((mpr_iActiveContainer-1)*m_Width*(-1)).toFloat()
 
             for (i in 0..iCCount - 1 step 1) {
                 var Child: View = getChildAt(i)
-                var iCoord: Int = 0
-                if (endc>0) {
-                    if (Child.x > 0 && Child.x < iMinData) {
-                        iMinData = (Child.x).toInt()
-                        minimumIndex = i
-                    }
-                } else{
-                    if (Child.x<= 0 && Child.x > iMinData) {
-                        iCoord = (Child.x * (-1)).toInt()
-                        iMinData = iCoord
-                        minimumIndex = i
-                    }
-                }
+                if (i==0)
+                        Child.x = beginX
+                    else
+                        Child.x = (beginX + m_Width).toFloat()
+                beginX = Child.x
             }
-            if (endc>0) iMinData else iMinData = iMinData
+            if (diffX<0) mpr_iActiveContainer-- else mpr_iActiveContainer++
 
-
-            while (iMinData>0){
-                iMinData = iMinData / 2
-                for (i in 0..iCCount - 1 step 1) {
-                    var Child: View = getChildAt(i)
-                    if (endc>0) {
-                        Child.x = Child.x - iMinData
-                    }
-                    else {
-                        Child.x = Child.x + iMinData
-                    }
-                }
+            for (i in 0..iCCount - 1 step 1) {
+                var Child: View = getChildAt(i)
+                var Il:Float=Child.x
+                println (">>> Total X: Numer=$i and X=$Il")
             }
 
-            if (endc<0) mpr_iActiveContainer-- else mpr_iActiveContainer++
-
-            val time2 = System.currentTimeMillis()
-            var timeDiff = time2-time1
-            println (">>> time engine: $timeDiff")
-
-            /*   for (x in 1..endc step 1){
-                   sleep(10)
-                   println(">>>tempX = $tempX, x=$x")
-                   linearSwitcher.x = tempX - x
-                   linearSwitcher.invalidate()
-               }*/
-            //linearSwitcher.scrollTo(X2.toInt(), linearSwitcher.y.toInt())
-            //handle the values here        return super.onFling(e1, e2, velocityX, velocityY)
             return false
         }
 
@@ -188,17 +159,14 @@ class LinearSwitcher : RelativeLayout {
             if (endc<0 && mpr_iActiveContainer==0) return false
             if (endc>0 && mpr_iActiveContainer>=(mpr_iMaxContainers-1)) return false
 
-            var iCCount = childCount
 
-            var Child: View = getChildAt(0)
-            var tempX = Child.x
-            Child.x = tempX - distanceX
-            var Child2: View = getChildAt(1)
-            var tempX2 = Child2.x
-            Child2.x = tempX2 - distanceX
-            var xt = Child2.x
-            println(">>>PAGE -2: X=$xt")
-            //linearSwitcher.x = tempX - diffX
+
+            var iCCount = childCount
+            for (i in 0..iCCount - 1 step 1) {
+                var Child: View = getChildAt(i)
+                Child.x = Child.x - distanceX
+            }
+
             invalidate()
             return false
         }

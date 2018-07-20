@@ -1,10 +1,12 @@
-package com.testapp.homevideoproject
+package com.testapp.homevideoproject.linear_presentation
 
 import android.content.Context
 import android.graphics.Color
 import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
+import com.testapp.homevideoproject.LineOfSwitcher
+import com.testapp.homevideoproject.SingletonSettings
 import com.testapp.homevideoproject.switchers.BinarySwitcher
 
 /**
@@ -18,7 +20,9 @@ class LinearContainer: LinearLayout {
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
         orientation= VERTICAL
         if (vID==2) setBackgroundColor(Color.RED)
-        setGravity(Gravity.CENTER_VERTICAL)
+        if (vID==3) setBackgroundColor(Color.BLUE)
+        if (vID==4) setBackgroundColor(Color.YELLOW)
+        setGravity(Gravity.CENTER_HORIZONTAL)
        // minimumWidth = iWidth-50
         m_iWidth = iWidth
         m_iIDPage = vID
