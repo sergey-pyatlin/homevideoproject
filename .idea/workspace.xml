@@ -17,14 +17,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/javaCompile/taskJars.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/javaCompile/taskJars.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/ScrollPanel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/ScrollPanel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/SingletonSettings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/SingletonSettings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearContainer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearContainer.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,8 +64,8 @@
       <file leaf-file-name="ScrollPanel.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/ScrollPanel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+            <state relative-caret-position="85">
+              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -72,8 +73,8 @@
       <file leaf-file-name="LinearSwitcher.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearSwitcher.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="-64">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
               <folding>
                 <element signature="e#58#535#0" expanded="true" />
               </folding>
@@ -84,17 +85,29 @@
       <file leaf-file-name="LinearContainer.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearContainer.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="195">
+              <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="LineOfSwitcher.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/LineOfSwitcher.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearWidgets/LineOfSwitcher.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="123">
+              <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BigStatusWidget.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearWidgets/BigStatusWidget.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="e#72#355#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,15 +148,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/MainActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -152,8 +156,8 @@
         <option value="valueResourceFile" />
         <option value="resourceFile" />
         <option value="layoutResourceFile" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -187,8 +191,8 @@
       <find>countPagesSwitchers</find>
       <find>red</find>
       <find>countSwitchers</find>
-      <find>scroll</find>
       <find>listSwitchers</find>
+      <find>scroll</find>
     </findStrings>
     <replaceStrings>
       <replace>SWITCHER</replace>
@@ -2114,10 +2118,11 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/ExoPlayerViewExt.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/ExoPlayerExt.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearContainer.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearSwitcher.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/ScrollPanel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/SingletonSettings.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/ScrollPanel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearWidgets/BigStatusWidget.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearContainer.kt" />
       </list>
     </option>
   </component>
@@ -2162,6 +2167,14 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="homevideoproject" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="linear_presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="LinearWidgets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="homevideoproject" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="homevideoproject" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="switchers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2193,10 +2206,11 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.25172412" />
-    <property name="settings.editor.selected.configurable" value="instant.run" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.testapp.homevideoproject.linear_presentation.LinearWidgets" />
       <recent name="com.testapp.homevideoproject.linear_presentation" />
     </key>
     <key name="android.template.packageName">
@@ -2261,7 +2275,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532359693841" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532370246577" />
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -2286,7 +2300,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532359693844" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532370246579" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2310,7 +2324,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532359693844" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532370246580" />
       </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -2423,7 +2437,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532100975414</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Bugfix">
+      <created>1532359728232</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1532359728232</updated>
+    </task>
+    <task id="LOCAL-00012" summary="New Widget template was added">
+      <created>1532370074894</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1532370074894</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -2448,21 +2476,21 @@
       <window_info anchor="bottom" id="Logcat" order="8" weight="0.3248731" />
       <window_info id="Capture Tool" order="8" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.50732064" side_tool="true" visible="true" weight="0.39576548" />
+      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.5065886" side_tool="true" visible="true" weight="0.32899022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49267936" visible="true" weight="0.39576548" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49267936" weight="0.39576548" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49926794" weight="0.32736155" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49386504" weight="0.42833877" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49394855" weight="0.32899022" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.49341142" visible="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.36886632" />
       <window_info id="Captures" order="6" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4900285" visible="true" weight="0.23499268" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4900285" visible="true" weight="0.23499268" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="15" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
       <window_info anchor="right" id="Gradle" order="7" weight="0.32928804" />
@@ -2523,14 +2551,16 @@
     <MESSAGE value="LinearLayout with vertical orientation works fine" />
     <MESSAGE value="Carousel shanges. LinearLayout swipe works. Need to fix edge cases on the pages" />
     <MESSAGE value="Refactoring of switcher carousel engine" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring of switcher carousel engine" />
+    <MESSAGE value="Bugfix" />
+    <MESSAGE value="New Widget template was added" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Widget template was added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearContainer.kt</url>
-          <line>39</line>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="223" />
         </line-breakpoint>
@@ -2541,7 +2571,7 @@
           <option name="timeStamp" value="226" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/LineOfSwitcher.kt</url>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearWidgets/LineOfSwitcher.kt</url>
           <line>43</line>
           <properties />
           <option name="timeStamp" value="227" />
@@ -2572,8 +2602,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_stat_name.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_move_detection.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -2786,31 +2814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/switchers/Detector.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="80" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/switchers/BinaryDetector.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/ScrollPanel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/LineOfSwitcher.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
@@ -2821,20 +2828,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/ScrollPanel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-26/android/widget/LinearLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearWidgets/LineOfSwitcher.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/switchers/Detector.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="80" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearSwitcher.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="-64">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
           <folding>
             <element signature="e#58#535#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearWidgets/BigStatusWidget.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#72#355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testapp/homevideoproject/linear_presentation/LinearContainer.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="195">
+          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
         </state>
       </provider>
     </entry>
