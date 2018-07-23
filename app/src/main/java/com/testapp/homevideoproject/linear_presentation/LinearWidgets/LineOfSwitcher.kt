@@ -1,15 +1,12 @@
-package com.testapp.homevideoproject
+package com.testapp.homevideoproject.linear_presentation.LinearWidgets
 import android.content.Context
-import android.graphics.Color
 import android.graphics.Typeface
 import android.util.TypedValue
 import android.view.*
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.LinearLayout.LayoutParams
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_scroll_panel.*
-import java.util.*
+import com.testapp.homevideoproject.R
 
 /*
 *LinerSwotcher has Containers. Container has LineOfSwithcer. LinerSwither has image and text

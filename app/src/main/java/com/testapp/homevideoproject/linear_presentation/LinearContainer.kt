@@ -1,12 +1,12 @@
 package com.testapp.homevideoproject.linear_presentation
 
 import android.content.Context
-import android.graphics.Color
 import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
-import com.testapp.homevideoproject.LineOfSwitcher
+import com.testapp.homevideoproject.linear_presentation.LinearWidgets.LineOfSwitcher
 import com.testapp.homevideoproject.SingletonSettings
+import com.testapp.homevideoproject.linear_presentation.LinearWidgets.BigStatusWidget
 import com.testapp.homevideoproject.switchers.BinarySwitcher
 
 /**
@@ -53,6 +53,10 @@ class LinearContainer: LinearLayout {
             lineOfSwitcher.InitLine()
             addView(lineOfSwitcher)
         }
+        /*var lineOfSwitcher = BigStatusWidget(m_cont, this)
+        lineOfSwitcher.InitLine()
+        addView(lineOfSwitcher)*/
+
 
         return 1
     }
