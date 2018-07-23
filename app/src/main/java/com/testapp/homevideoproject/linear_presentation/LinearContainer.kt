@@ -18,16 +18,12 @@ class LinearContainer: LinearLayout {
         m_vParentView = vParent
         m_cont = ctx
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
-        orientation= VERTICAL
-        if (vID==2) setBackgroundColor(Color.RED)
-        if (vID==3) setBackgroundColor(Color.BLUE)
-        if (vID==4) setBackgroundColor(Color.YELLOW)
         setGravity(Gravity.CENTER_HORIZONTAL)
+        orientation= VERTICAL
        // minimumWidth = iWidth-50
         m_iWidth = iWidth
         m_iIDPage = vID
         if (m_iIDPage>1) this.x = ((iWidth * (m_iIDPage-1))).toFloat()
-        x = x + 1 - 1
     }
     private var m_vParentView:View
     private var m_cont: Context

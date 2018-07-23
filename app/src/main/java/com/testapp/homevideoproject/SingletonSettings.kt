@@ -17,7 +17,7 @@ public class SingletonSettings private constructor(){
 
     var b:String? = "OpaЖопа"
     var listSwitchers: MutableList<BinarySwitcher> = mutableListOf()
-    var byCountSwitcherOnThePage: Byte = 2
+    var byCountSwitcherOnThePage: Byte = 3
     private var mp_IsSitchersInitialized = false
 
     public fun InitSwitchers(){
